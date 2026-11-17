@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Critterbots: Colonies</title><link rel="stylesheet" href="site.css"><link rel="icon" href="data:,"></head>
+<body><nav><b>CRITTERBOTS: COLONIES</b><a class="cur" href="index.html">Home</a><a href="play.html">Play</a><a href="guide.html">Guide</a><a href="ladder.html">Ladder</a></nav>
+<main><h1>Program a colony. Out-farm the rest.</h1>
+<p>Write a Python function <code>act(view)</code> that steers your critters for 400 ticks on a 24×24 map. Gather seeds, plant crops, hatch workers, scouts and brutes, and out-bank your rivals. Matches run in your browser and replay exactly the same every time.</p>
+<p><a href="play.html"><button class="primary">Write your first bot</button></a></p>
+<div id="viewer" aria-label="Sample match: warlord, farmer, raider and forager"></div>
+<p class="mut">Sample match: warlord, farmer, raider, forager on seed 6. <a href="ladder.html"><button>Watch matches</button></a></p></main>
+<script src="viewer.js"></script>
+<script>fetch('samples/four-bot.json').then(function(r){return r.json();}).then(function(d){CBViewer(document.getElementById('viewer')).load(d);}).catch(function(){document.getElementById('viewer').textContent='Sample replay could not be loaded.';});</script></body></html>

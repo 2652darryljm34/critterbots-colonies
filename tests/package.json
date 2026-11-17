@@ -1,0 +1,2 @@
+{ "name": "critterbots-colonies-tests", "private": true, "description": "Dev dependencies for tests/web_e2e.js only. Run: npm install && node web_e2e.js",
+  "dependencies": { "playwright-core": "1.55.0", "pyodide": "0.27.7" } }

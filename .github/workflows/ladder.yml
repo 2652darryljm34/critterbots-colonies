@@ -1,0 +1,22 @@
+# Validates ladder submissions on pull requests. pull_request (never pull_request_target): no secrets, read-only token,
+# so a submitted bot cannot reach anything. The bot runs in an isolated subprocess with time and memory limits.
+name: ladder
+on:
+  pull_request:
+    paths: ["ladder/bots/**"]
+permissions: {contents: read}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: validate changed bots
+        run: |
+          files=$(git diff --name-only --diff-filter=AM "origin/${{ github.base_ref }}...HEAD" -- 'ladder/bots/*.py')
+          other=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- 'ladder/bots/' | grep -v '^ladder/bots/[^/]*\.py$' || true)
+          if [ -n "$other" ]; then echo "only ladder/bots/<username>.py files may change under ladder/bots/: $other"; exit 1; fi
+          [ -n "$files" ] || { echo "no bot files changed"; exit 0; }
+          python tools/validate_bot.py $files

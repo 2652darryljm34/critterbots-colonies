@@ -1,0 +1,9 @@
+[
+ {"id":"first-seed","title":"First harvest","blurb":"Bank at least 20 seeds against the sleepwalker.","opp":"sleepwalker.py","seed":1,"goal":{"stat":"banked","gte":20}},
+ {"id":"beat-sleep","title":"Beat the sleepwalker","blurb":"Finish with more stores than the sleepwalker.","opp":"sleepwalker.py","seed":2,"goal":{"win":true}},
+ {"id":"beat-forager","title":"Out-forage the forager","blurb":"Win against the forager. Hint: more workers, or crops.","opp":"forager.py","seed":3,"goal":{"win":true}},
+ {"id":"gardener","title":"Gardener","blurb":"Harvest at least 6 crops (plant seeds on soil cells; they ripen after 40 ticks).","opp":"sleepwalker.py","seed":4,"goal":{"stat":"harvested","gte":6}},
+ {"id":"big-colony","title":"Full house","blurb":"Hatch at least 3 critters and finish with 30+ stores.","opp":"sleepwalker.py","seed":5,"goal":{"stat":"hatches","gte":3,"stores_gte":30}},
+ {"id":"clean-run","title":"Clean code","blurb":"Win against the forager with zero errors and nobody starved.","opp":"forager.py","seed":6,"goal":{"win":true,"errors":0,"stat":"starved","lte":0}},
+ {"id":"beat-farmer","title":"Out-farm the farmer","blurb":"Win against the farmer. This one needs real planning.","opp":"farmer.py","seed":7,"goal":{"win":true}}
+]

@@ -1,0 +1,1 @@
+{"engine_version": "0.1.0", "bots": [{"example": "warlord.py"}, {"example": "farmer.py"}, {"example": "raider.py"}, {"example": "forager.py"}], "seed": 6, "ticks": 400}

@@ -1,0 +1,32 @@
+[
+ {
+  "file": "sleepwalker.py",
+  "name": "Sleepwalker",
+  "tier": 0,
+  "blurb": "Wanders at random. The floor: any real bot should beat it."
+ },
+ {
+  "file": "forager.py",
+  "name": "Forager",
+  "tier": 1,
+  "blurb": "Walks to the nearest seed and banks. The template to copy."
+ },
+ {
+  "file": "farmer.py",
+  "name": "Farmer",
+  "tier": 2,
+  "blurb": "Plants seeds on soil, harvests crops, hatches workers."
+ },
+ {
+  "file": "raider.py",
+  "name": "Raider",
+  "tier": 2,
+  "blurb": "Hatches brutes that bonk carriers and trample sprouts."
+ },
+ {
+  "file": "warlord.py",
+  "name": "Warlord",
+  "tier": 3,
+  "blurb": "Farms, snatches, and keeps a brute out front."
+ }
+]

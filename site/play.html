@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play · Critterbots: Colonies</title><link rel="stylesheet" href="site.css"><link rel="icon" href="data:,"></head>
+<body>
+<nav><b>CRITTERBOTS: COLONIES</b><a href="index.html">Home</a><a class="cur" href="play.html">Play</a><a href="guide.html">Guide</a><a href="ladder.html">Ladder</a></nav>
+<main>
+<div class="play">
+  <section>
+    <h1>Your bot</h1>
+    <div id="ro" class="banner-ro" hidden>This is a shared bot, shown read-only. <button id="fork">Edit a copy</button></div>
+    <div class="bar"><label>Challenge <select id="chal"><option value="">Free play</option></select></label><span id="chalinfo"></span></div>
+    <div class="bar"><label>Opponent <select id="opp"></select></label><label>Seed <input id="seed" type="number" value="1" min="1" style="width:90px"></label>
+      <button id="run" class="primary" disabled>Run match</button><button id="reset">Reset to forager</button><button id="share">Copy share link</button></div>
+    <div class="bar" id="shbar" hidden><input id="shareurl" readonly style="flex:1;min-width:240px;padding:6px;background:#10131a;color:#e6edf7;border:1px solid #45506a;border-radius:6px" aria-label="Share link"></div>
+    <div id="editor"></div>
+    <div id="status" role="status" aria-live="polite">Starting…</div><div id="problems"></div>
+  </section>
+  <section><h1>Match</h1><div id="viewer"></div></section>
+</div>
+</main>
+<script src="viewer.js"></script><script src="play.js"></script>
+</body></html>
